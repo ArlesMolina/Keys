@@ -39,7 +39,11 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
+<<<<<<< HEAD
 set_global_assignment -name TOP_LEVEL_ENTITY SubBytes
+=======
+set_global_assignment -name TOP_LEVEL_ENTITY Top
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:58:28  APRIL 22, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
@@ -82,11 +86,25 @@ set_global_assignment -name EDA_TEST_BENCH_NAME XorModule_tb -section_id eda_sim
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id XorModule_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id XorModule_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME XorModule_tb -section_id XorModule_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE Modules/RAM/RAM.vhd
+set_global_assignment -name VHDL_FILE Modules/RAM/RAM_tb.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE Top_tb.vhd -section_id Top_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Modules/RotWord/RotWord_tb.vhd -section_id RotWord_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Modules/SubBytes/SubBytes_tb.vhd -section_id SubBytes_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Modules/Xor/XorModule_tb.vhd -section_id XorModule_tb
+<<<<<<< HEAD
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+=======
+set_global_assignment -name EDA_TEST_BENCH_NAME RAM_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id RAM_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id RAM_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME RAM_tb -section_id RAM_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Modules/RAM/RAM_tb.vhd -section_id RAM_tb
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c

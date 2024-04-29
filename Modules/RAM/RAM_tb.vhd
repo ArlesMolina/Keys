@@ -1,45 +1,32 @@
 ----------------------------------------------------------------------------------
--- Company:        ITESM - Campus Qro.
--- Engineer:       Emanuel Vega
+-- Company:				ITESM - IRS 2024
 -- 
--- Create Date:    07:05:34 04/18/2024 
--- Design Name: 
--- Module Name:    RotWord 
--- Project Name: 	 AES
--- Target Devices: 
--- Tool versions: 
--- Description:    Module rotWord for the first step of the key schedule
--- Dependencies: 
+-- Create Date: 		22/04/2024
+-- Design Name: 		Xor TestBench
+-- Module Name:		Xor Module TestBench
+-- Target Devices: 	DE10-Lite
+-- Description: 		TestBench del módulo Xor
 --
--- Revision: 
--- Revision 0.01 - File Created
+-- Version 0.0 - File Creation
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
 
+-- Commonly used libraries
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
 
+-- Entity declaration for testbench
+entity RAM_tb is
+end RAM_tb;
 
-entity RotWord is
-	port(	-- Column to be rotated, each 8 bits represent a different row
-			column			: in std_logic_vector(31 downto 0);
-			rotatedWord		: out std_logic_vector(31 downto 0)
-	);
-end RotWord;
+-- Architecture definition for testbench
+architecture tb_architecture of RAM_tb is
 
-<<<<<<< HEAD
-
-architecture behaveRot of RotWord is
-begin
-    rotation : process(column)
-    begin
-        rotatedWord <= column(23 downto 0) & column(31 downto 24);
-    end process rotation;
-end architecture behaveRot;
-=======
      -- Component declaration for DUT (Device Under Test)
-    component RotWord
+    component RAM
         Port (
             input_port_1 : in std_logic;
             input_port_2 : in std_logic;
@@ -59,7 +46,7 @@ end architecture behaveRot;
 
 	-- Instantiate the DUT
     begin
-        dut: RotWord
+        dut: RAM
             port map (
                 input_port_1 => input_port_1_tb,
                 input_port_2 => input_port_2_tb,
@@ -95,4 +82,3 @@ end architecture behaveRot;
 
     
 end architecture tb_architecture;
->>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c

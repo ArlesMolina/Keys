@@ -1,5 +1,9 @@
 Analysis & Synthesis report for Keys
+<<<<<<< HEAD
 Mon Apr 22 10:23:58 2024
+=======
+Thu Apr 25 10:04:04 2024
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -10,7 +14,13 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +47,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Failed - Mon Apr 22 10:23:58 2024           ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; Keys                                        ;
 ; Top-level Entity Name              ; SubBytes                                    ;
+=======
+; Analysis & Synthesis Status        ; Successful - Thu Apr 25 10:04:04 2024       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; Keys                                        ;
+; Top-level Entity Name              ; Top                                         ;
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 2                                           ;
+;     Total combinational functions  ; 2                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 4                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -62,7 +79,11 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
+<<<<<<< HEAD
 ; Top-level entity name                                            ; SubBytes           ; Keys               ;
+=======
+; Top-level entity name                                            ; Top                ; Keys               ;
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -142,6 +163,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
+<<<<<<< HEAD
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
 +-------------------------------------+
 ; Parallel Compilation                ;
@@ -151,6 +173,112 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
+=======
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------+---------+
+; Top.vhd                          ; yes             ; User VHDL File  ; C:/ProyQuartus/Keys/Keys/Top.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 2                  ;
+;                                             ;                    ;
+; Total combinational functions               ; 2                  ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 0                  ;
+;     -- 3 input functions                    ; 0                  ;
+;     -- <=2 input functions                  ; 2                  ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 2                  ;
+;     -- arithmetic mode                      ; 0                  ;
+;                                             ;                    ;
+; Total registers                             ; 0                  ;
+;     -- Dedicated logic registers            ; 0                  ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 4                  ;
+;                                             ;                    ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; input_port_1~input ;
+; Maximum fan-out                             ; 2                  ;
+; Total fan-out                               ; 10                 ;
+; Average fan-out                             ; 1.00               ;
++---------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |Top                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |Top                ; Top         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 4                           ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         2 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -159,6 +287,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Mon Apr 22 10:21:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Keys -c Keys
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -200,5 +329,55 @@ Error: Quartus Prime Analysis & Synthesis was unsuccessful. 16 errors, 1 warning
     Error: Processing ended: Mon Apr 22 10:23:58 2024
     Error: Elapsed time: 00:02:57
     Error: Total CPU time (on all processors): 00:00:37
+=======
+    Info: Processing started: Thu Apr 25 10:03:40 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Keys -c Keys
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
+    Info (12022): Found design unit 1: Top-Behavioral File: C:/ProyQuartus/Keys/Keys/Top.vhd Line: 35
+    Info (12023): Found entity 1: Top File: C:/ProyQuartus/Keys/Keys/Top.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file top_tb.vhd
+    Info (12022): Found design unit 1: Top_tb-tb_architecture File: C:/ProyQuartus/Keys/Keys/Top_tb.vhd Line: 26
+    Info (12023): Found entity 1: Top_tb File: C:/ProyQuartus/Keys/Keys/Top_tb.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file modules/subbytes/subbytes.vhd
+    Info (12022): Found design unit 1: SubBytes-Behavioral File: C:/ProyQuartus/Keys/Keys/Modules/SubBytes/SubBytes.vhd Line: 32
+    Info (12023): Found entity 1: SubBytes File: C:/ProyQuartus/Keys/Keys/Modules/SubBytes/SubBytes.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file modules/subbytes/subbytes_tb.vhd
+    Info (12022): Found design unit 1: SubBytes_tb-tb_architecture File: C:/ProyQuartus/Keys/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 26
+    Info (12023): Found entity 1: SubBytes_tb File: C:/ProyQuartus/Keys/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file modules/rotword/rotword.vhd
+    Info (12022): Found design unit 1: RotWord-behaveRot File: C:/ProyQuartus/Keys/Keys/Modules/RotWord/RotWord.vhd Line: 32
+    Info (12023): Found entity 1: RotWord File: C:/ProyQuartus/Keys/Keys/Modules/RotWord/RotWord.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file modules/rotword/rotword_tb.vhd
+    Info (12022): Found design unit 1: RotWord_tb-tb_architecture File: C:/ProyQuartus/Keys/Keys/Modules/RotWord/RotWord_tb.vhd Line: 26
+    Info (12023): Found entity 1: RotWord_tb File: C:/ProyQuartus/Keys/Keys/Modules/RotWord/RotWord_tb.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file modules/xor/xormodule.vhd
+    Info (12022): Found design unit 1: XorModule-Behavioral File: C:/ProyQuartus/Keys/Keys/Modules/Xor/XorModule.vhd Line: 34
+    Info (12023): Found entity 1: XorModule File: C:/ProyQuartus/Keys/Keys/Modules/Xor/XorModule.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file modules/xor/xormodule_tb.vhd
+    Info (12022): Found design unit 1: XorModule_tb-tb_architecture File: C:/ProyQuartus/Keys/Keys/Modules/Xor/XorModule_tb.vhd Line: 26
+    Info (12023): Found entity 1: XorModule_tb File: C:/ProyQuartus/Keys/Keys/Modules/Xor/XorModule_tb.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file modules/ram/ram.vhd
+    Info (12022): Found design unit 1: RAM-RAM_ARCH File: C:/ProyQuartus/Keys/Keys/Modules/RAM/RAM.vhd Line: 31
+    Info (12023): Found entity 1: RAM File: C:/ProyQuartus/Keys/Keys/Modules/RAM/RAM.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file modules/ram/ram_tb.vhd
+    Info (12022): Found design unit 1: RAM_tb-tb_architecture File: C:/ProyQuartus/Keys/Keys/Modules/RAM/RAM_tb.vhd Line: 26
+    Info (12023): Found entity 1: RAM_tb File: C:/ProyQuartus/Keys/Keys/Modules/RAM/RAM_tb.vhd Line: 22
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Top.vhd(38): object "internal_signal" assigned a value but never read File: C:/ProyQuartus/Keys/Keys/Top.vhd Line: 38
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Thu Apr 25 10:04:04 2024
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:47
+>>>>>>> 2aee67831dd48df040af750de15a9102604b3e4c
 
 

@@ -21,15 +21,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 
-entity RotWord is
+entity rotWord is
 	port(	-- Column to be rotated, each 8 bits represent a different row
 			column			: in std_logic_vector(31 downto 0);
 			rotatedWord		: out std_logic_vector(31 downto 0)
 	);
-end RotWord;
+end rotWord;
 
 
-architecture behaveRot of RotWord is
+architecture behaveRot of rotWord is
 begin
     rotation : process(column)
     begin
