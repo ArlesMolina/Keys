@@ -1,11 +1,12 @@
 ----------------------------------------------------------------------------------
 -- Company:				ITESM - IRS 2024
+-- Engineers: 			Sebastián Castellanos, Diego Quezada and Eduardo Viveros
 -- 
--- Create Date: 		22/04/2024
--- Design Name: 		Sub Bytes
--- Module Name:		Sub Bytes Module
+-- Create Date: 		13: 11: 08 21/04/2024
+-- Design Name: 		SubBytes_keys
+-- Module Name:		SubBytes
 -- Target Devices: 	DE10-Lite
--- Description: 		Sub Bytes Module
+-- Description: 		Value substitution of the input rotWord using the S-Box table for the second step of the key schedule.
 --
 -- Version 0.0 - File Creation
 -- Additional Comments: 
@@ -18,17 +19,20 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 -- Declaración de la entidad
-entity SubBytes is
+entity SubBytes_keys is
     Port (
+		Start				: in STD_LOGIC;
+		Clk 				: in STD_LOGIC;
+		Finish			: out STD_LOGIC;
         -- Entrada de datos.
         rotatedWord	: in  std_logic_vector(31 downto 0); --Input de 32 bits que viene de rotWord.
         -- Salida de datos.
         suBytedWord	: out std_logic_vector(31 downto 0) --Output de 32 bits. 
     );
-end SubBytes;
+end SubBytes_keys;
 
 -- Definición de la Arquitectura.
-architecture Behavioral of SubBytes is
+architecture Behavioral of SubBytes_keys is
     -- signals internas para cada byte.
     signal byte0, byte1, byte2, byte3: std_logic_vector(7 downto 0);
 
