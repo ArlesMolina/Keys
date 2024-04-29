@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Mon Apr 22 08:15:42 2024
+Analysis & Synthesis Status : Failed - Mon Apr 22 10:23:58 2024
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Keys
-Top-level Entity Name : Keys
+Top-level Entity Name : SubBytes
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

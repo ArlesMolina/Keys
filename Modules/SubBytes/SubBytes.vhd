@@ -19,7 +19,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 -- Declaración de la entidad
-entity SubBytes_keys is
+entity SubBytes is
     Port (
 		Start				: in STD_LOGIC;
 		Clk 				: in STD_LOGIC;
@@ -29,10 +29,10 @@ entity SubBytes_keys is
         -- Salida de datos.
         suBytedWord	: out std_logic_vector(31 downto 0) --Output de 32 bits. 
     );
-end SubBytes_keys;
+end SubBytes;
 
 -- Definición de la Arquitectura.
-architecture Behavioral of SubBytes_keys is
+architecture Behavioral of SubBytes is
     -- signals internas para cada byte.
     signal byte0, byte1, byte2, byte3: std_logic_vector(7 downto 0);
 

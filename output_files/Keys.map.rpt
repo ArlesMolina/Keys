@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Keys
-Mon Apr 22 08:15:42 2024
+Mon Apr 22 10:23:58 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -37,10 +37,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Apr 22 08:15:42 2024           ;
+; Analysis & Synthesis Status        ; Failed - Mon Apr 22 10:23:58 2024           ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; Keys                                        ;
-; Top-level Entity Name              ; Keys                                        ;
+; Top-level Entity Name              ; SubBytes                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; Keys               ; Keys               ;
+; Top-level entity name                                            ; SubBytes           ; Keys               ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -142,20 +142,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +-------------------------------+
@@ -164,46 +159,46 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 08:15:22 2024
+    Info: Processing started: Mon Apr 22 10:21:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Keys -c Keys
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20029): Only one processor detected - disabling parallel compilation
 Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
-    Info (12022): Found design unit 1: Top-Behavioral File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Top.vhd Line: 35
-    Info (12023): Found entity 1: Top File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Top.vhd Line: 23
-Error (10500): VHDL syntax error at Top_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Top_tb.vhd Line: 48
-Error (10500): VHDL syntax error at Top_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Top_tb.vhd Line: 53
-Error (10500): VHDL syntax error at Top_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Top_tb.vhd Line: 72
-Error (10500): VHDL syntax error at Top_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Top_tb.vhd Line: 82
+    Info (12022): Found design unit 1: Top-Behavioral File: C:/Quartus/AES/Keys/Top.vhd Line: 35
+    Info (12023): Found entity 1: Top File: C:/Quartus/AES/Keys/Top.vhd Line: 23
+Error (10500): VHDL syntax error at Top_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: C:/Quartus/AES/Keys/Top_tb.vhd Line: 48
+Error (10500): VHDL syntax error at Top_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: C:/Quartus/AES/Keys/Top_tb.vhd Line: 53
+Error (10500): VHDL syntax error at Top_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: C:/Quartus/AES/Keys/Top_tb.vhd Line: 72
+Error (10500): VHDL syntax error at Top_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Quartus/AES/Keys/Top_tb.vhd Line: 82
 Info (12021): Found 0 design units, including 0 entities, in source file top_tb.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file modules/subbytes/subbytes.vhd
-    Info (12022): Found design unit 1: SubBytes-Behavioral File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/SubBytes/SubBytes.vhd Line: 34
-    Info (12023): Found entity 1: SubBytes File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/SubBytes/SubBytes.vhd Line: 22
-Error (10500): VHDL syntax error at SubBytes_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 48
-Error (10500): VHDL syntax error at SubBytes_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 53
-Error (10500): VHDL syntax error at SubBytes_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 72
-Error (10500): VHDL syntax error at SubBytes_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 82
+    Info (12022): Found design unit 1: SubBytes-Behavioral File: C:/Quartus/AES/Keys/Modules/SubBytes/SubBytes.vhd Line: 31
+    Info (12023): Found entity 1: SubBytes File: C:/Quartus/AES/Keys/Modules/SubBytes/SubBytes.vhd Line: 21
+Error (10500): VHDL syntax error at SubBytes_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: C:/Quartus/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 48
+Error (10500): VHDL syntax error at SubBytes_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: C:/Quartus/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 53
+Error (10500): VHDL syntax error at SubBytes_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: C:/Quartus/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 72
+Error (10500): VHDL syntax error at SubBytes_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Quartus/AES/Keys/Modules/SubBytes/SubBytes_tb.vhd Line: 82
 Info (12021): Found 0 design units, including 0 entities, in source file modules/subbytes/subbytes_tb.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file modules/rotword/rotword.vhd
-    Info (12022): Found design unit 1: RotWord-Behavioral File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/RotWord/RotWord.vhd Line: 34
-    Info (12023): Found entity 1: RotWord File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/RotWord/RotWord.vhd Line: 22
-Error (10500): VHDL syntax error at RotWord_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 48
-Error (10500): VHDL syntax error at RotWord_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 53
-Error (10500): VHDL syntax error at RotWord_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 72
-Error (10500): VHDL syntax error at RotWord_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 82
+    Info (12022): Found design unit 1: RotWord-Behavioral File: C:/Quartus/AES/Keys/Modules/RotWord/RotWord.vhd Line: 34
+    Info (12023): Found entity 1: RotWord File: C:/Quartus/AES/Keys/Modules/RotWord/RotWord.vhd Line: 22
+Error (10500): VHDL syntax error at RotWord_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: C:/Quartus/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 48
+Error (10500): VHDL syntax error at RotWord_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: C:/Quartus/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 53
+Error (10500): VHDL syntax error at RotWord_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: C:/Quartus/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 72
+Error (10500): VHDL syntax error at RotWord_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Quartus/AES/Keys/Modules/RotWord/RotWord_tb.vhd Line: 82
 Info (12021): Found 0 design units, including 0 entities, in source file modules/rotword/rotword_tb.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file modules/xor/xormodule.vhd
-    Info (12022): Found design unit 1: XorModule-Behavioral File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/Xor/XorModule.vhd Line: 34
-    Info (12023): Found entity 1: XorModule File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/Xor/XorModule.vhd Line: 22
-Error (10500): VHDL syntax error at XorModule_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 48
-Error (10500): VHDL syntax error at XorModule_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 53
-Error (10500): VHDL syntax error at XorModule_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 72
-Error (10500): VHDL syntax error at XorModule_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: E:/ricki/Documents/TEC/4Semestre/QuartusProjects/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 82
+    Info (12022): Found design unit 1: XorModule-Behavioral File: C:/Quartus/AES/Keys/Modules/Xor/XorModule.vhd Line: 34
+    Info (12023): Found entity 1: XorModule File: C:/Quartus/AES/Keys/Modules/Xor/XorModule.vhd Line: 22
+Error (10500): VHDL syntax error at XorModule_tb.vhd(48) near text "process";  expecting "begin", or a declaration statement File: C:/Quartus/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 48
+Error (10500): VHDL syntax error at XorModule_tb.vhd(53) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: C:/Quartus/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 53
+Error (10500): VHDL syntax error at XorModule_tb.vhd(72) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: C:/Quartus/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 72
+Error (10500): VHDL syntax error at XorModule_tb.vhd(82) near text "end";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Quartus/AES/Keys/Modules/Xor/XorModule_tb.vhd Line: 82
 Info (12021): Found 0 design units, including 0 entities, in source file modules/xor/xormodule_tb.vhd
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 16 errors, 1 warning
-    Error: Peak virtual memory: 4791 megabytes
-    Error: Processing ended: Mon Apr 22 08:15:42 2024
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:29
+    Error: Peak virtual memory: 4778 megabytes
+    Error: Processing ended: Mon Apr 22 10:23:58 2024
+    Error: Elapsed time: 00:02:57
+    Error: Total CPU time (on all processors): 00:00:37
 
 
